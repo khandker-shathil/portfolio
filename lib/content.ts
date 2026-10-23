@@ -1,5 +1,5 @@
 // Replace null values with your public details. Never put private information here.
-export const profile = { name: 'Khandker Shathil', role: 'Junior Software Developer', email: 'kajs.sjak@gmail.com' as string | null, phone: '+15709910349' as string | null, github: 'https://github.com/khandker-shathil' as string | null, linkedin: null as string | null, resume: '/resume.pdf' as string | null, photo: null as string | null };
+export const profile = { name: 'Khandker Shathil', role: 'Junior Software Developer', email: 'kajs.sjak@gmail.com' as string | null, phone: '+15709910349' as string | null, github: 'https://github.com/khandker-shathil' as string | null, linkedin: null as string | null, resume: '/resume.pdf' as string | null, photo: '/image.png' as string | null };
 export const projects = [
   {
     slug: 'project-one',
@@ -10,7 +10,7 @@ export const projects = [
     stack: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'shadcn/ui', 'Express.js', 'MongoDB', 'Better Auth', 'Stripe'],
     live: 'https://p-hero-a10.vercel.app/' as string | null,
     github: 'https://github.com/khandker-shathil/p-hero-a10' as string | null,
-    image: null as string | null,
+    image: 'project1.png' as string | null,
     challenges: 'Key technical challenges addressed in the implementation include keeping authentication consistent between Next.js and Express, enforcing public/private and free/premium lesson permissions on the server, and linking payments to the correct account. The frontend proxies API requests to keep browser cookies on one origin. Checkout activation verifies account ownership, payment completion, the configured price, and subscription status before granting premium access; webhooks keep that access aligned with subscription changes. Image uploads also validate file types and sizes and compress supported images before upload.',
     improvements: 'Potential next steps include a Stripe customer portal for self-service subscription management, draft autosaving for longer lessons, and end-to-end tests covering sign-in, checkout, premium access, and moderation. These are suggested improvements rather than completed features.'
   },
@@ -21,9 +21,9 @@ export const projects = [
     status: 'Assignment 9', number: '02', theme: 'peach',
     description: 'MediQueue is a full-stack tutor-booking application that helps students find tutors and manage sessions in one place. Visitors can browse and filter tutor listings and view profiles with subjects, pricing, institutions, and available slots. Signed-in users can book or cancel sessions, manage their own tutor listings, and update their profiles. Protected account pages and admin tools support separate user and administrator workflows. The current implementation uses Next.js App Router pages and API routes with MongoDB, Better Auth for email/password and Google sign-in, and a responsive Tailwind CSS and HeroUI interface.',
     stack: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'HeroUI', 'MongoDB', 'Better Auth'],
-    live: null as string | null,
+    live: 'https://p-hero-a9.vercel.app/' as string | null,
     github: 'https://github.com/khandker-shathil/p-hero-a9' as string | null,
-    image: null as string | null,
+    image: '/project2.png' as string | null,
     challenges: 'Key technical challenges addressed in the implementation include keeping tutor availability consistent during bookings and cancellations, protecting account and admin routes, and passing MongoDB data safely to client components. Booking creation conditionally decrements a slot only when capacity remains and restores it if the booking insert fails. Cancellation checks ownership and confirmed status before restoring availability, with rollback handling if that update fails. Tutor records are serialized before crossing the server/client boundary.',
     improvements: 'Potential next steps include date-and-time-based scheduling, booking reminders, direct profile and tutor photo uploads, and MongoDB transactions to strengthen consistency across booking and slot updates. Automated tests for simultaneous bookings and repeated cancellations would help validate those workflows. These are suggested improvements rather than completed features.'
   },
